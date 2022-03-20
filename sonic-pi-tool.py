@@ -424,7 +424,7 @@ class Server:
     def shutdown_sonic_pi(self):
         full = False
         full += self.kill_process('GUI', '.*/Sonic[ -]Pi([.]exe)?')
-        full += self.kill_process('Server', '.*/ruby([.]exe)?$', '.*/sonic-pi-server.rb')
+        full += self.kill_process('Server', '.*/ruby.*([.]exe)?', '.*/sonic-pi-server.rb')
         part = False
         part += self.kill_process('SCSynth', '.*/app/server/native/scsynth([.]exe)?')
         part += self.kill_process('Erlang', '.*/app/server/native/.*/(beam[.]smp|erl([.]exe)?)')
