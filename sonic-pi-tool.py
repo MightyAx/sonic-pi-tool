@@ -427,7 +427,7 @@ class Server:
         full += self.kill_process('Server', '.*/ruby.*([.]exe)?', '.*/sonic-pi-server.rb')
         part = False
         part += self.kill_process('SCSynth', '.*/app/server/native/scsynth([.]exe)?')
-        part += self.kill_process('Erlang', '.*/app/server/native/.*/(beam[.]smp|erl([.]exe)?)')
+        part += self.kill_process('Erlang', '.*/(beam[.]smp|erl([.]exe)?)', '/opt/sonic-pi/app/server/erlang')
         part += self.kill_process('o2m', '.*/app/server/native/.*/o2m([.]exe)?')
         part += self.kill_process('m2o', '.*/app/server/native/.*/m2o([.]exe)?')
         if full:
