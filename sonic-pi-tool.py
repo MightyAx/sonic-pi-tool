@@ -48,7 +48,8 @@ class Installation:
                      '/opt/sonic-pi/app',
                      '/usr/bin/sonic-pi-*',
                      '/usr/bin/sonic-pi',
-                     '/usr/lib/sonic-pi')
+                     '/usr/lib/sonic-pi',
+                     '/usr/lib/sonic-pi/app')
     ruby_paths = ['server/native/ruby/bin/ruby',
                   'server/native/ruby/bin/ruby.exe']
     server_paths = ['server/ruby/bin/sonic-pi-server.rb',
